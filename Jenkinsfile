@@ -89,7 +89,7 @@ podTemplate(yaml: '''
       stage('Build Java Image') {
         container('kaniko') {
           stage('Build a container') {
-            if (env.BRANCH_NAME == "master") {
+            if (env.BRANCH_NAME == "main") {
               image_version = ":1.0"
             }
             if (env.BRANCH_NAME == "feature") {
